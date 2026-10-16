@@ -1,0 +1,26 @@
+.page-background {
+    background-color: #43964c;
+    min-height: 100vh;          /* era: height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;            /* novo: respiro em telas baixas */
+}
+
+.form-div {
+    background-color: #eeeeee;
+    width: 550px;
+    min-height: 550px;          /* era: height: 550px */
+    padding-bottom: 30px;       /* novo */
+    border-radius: 30px;
+}
+.green-text {
+    color: #43964c; 
+    font-weight: bold;
+}
+
+.input-span {
+    color: #43964c; 
+    font-weight: bold;
+    font-size: 20px;
+}

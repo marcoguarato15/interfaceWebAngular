@@ -1,0 +1,30 @@
+<nav class="navbar bg-body-tertiary" style="background-color: #43964c !important" data-bs-theme="light">
+  <div class="container-xxl">
+    <a class="navbar-brand text-white" (click)="redirecionarPaginaDestino('/')">
+      <img src="assets/logo-cineif-white.png" class="rounded" style="height: 60px" />
+    </a>
+
+  @if (userLogado){
+    <!-- Área do usuário logado -->
+    <div class="d-flex align-items-center">
+      <i class="bi bi-person-circle text-white" style="font-size: 40px"></i>
+      <span class="text-white fw-bold" style="margin-left: 20px; font-size: 20px">Olá, {{ userLogado.nome }}</span>
+      <button type="button" class="btn btn-light" style="margin-left: 20px;" (click)="logout()">
+        <i class="bi bi-box-arrow-right" style="font-size: 20px; color: #43964c"></i>
+      </button>
+    </div> 
+  } @else {
+    <!-- Área do usuário não logado -->
+    <div class="d-flex align-items-center">
+      <button type="button" class="btn btn-light" (click)="redirecionarPaginaDestino('/login')">
+        <span class=" fw-bold" style="font-size: 20px; color: #43964c">Login</span>
+      </button>
+      <button type="button" class="btn btn-light" style="margin-left: 20px;" (click)="redirecionarPaginaDestino('/cadastro')">
+        <span class=" fw-bold" style="font-size: 20px; color: #43964c">Cadastrar-se</span>
+      </button>
+    </div>
+  }
+  </div>
+</nav>
+
+<router-outlet />
